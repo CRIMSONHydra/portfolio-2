@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Real-Time Stock Portfolio Tracker</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Chart.js-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Real-Time Stock Portfolio Tracker</h1>
+  </header>
+
+  <main>
+    <section class="portfolio">
+      <h2>Your Portfolio</h2>
+
+      <form id="addStockForm">
+        <input type="text" id="stockSymbol" placeholder="Enter stock symbol or name" autocomplete="off" required />
+        <div id="suggestions" class="suggestions"></div>
+
+        <input type="number" id="shares" placeholder="Shares" min="1" required />
+
+        <input type="number" id="buyPrice" placeholder="Buy Price (auto-filled)" step="0.01" required />
+        <button type="submit">Add Stock</button>
+      </form>
+
+      <table id="portfolioTable">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Buy Price</th>
+            <th>Current Price</th>
+            <th>Profit</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Stock rows -->
+        </tbody>
+      </table>
+
+      <div id="summary">
+        <p>Total Invested: $<span id="totalInvested">0.00</span></p>
+        <p>Total Profit: $<span id="totalProfit">0.00</span></p>
+      </div>
+    </section>
+
+    <!-- Charts -->
+    <section class="trend-chart">
+      <h2>Stock Trends</h2>
+      <select id="timePeriod">
+        <option value="TIME_SERIES_INTRADAY">Intraday</option>
+        <option value="TIME_SERIES_DAILY" selected>Daily</option>
+        <option value="TIME_SERIES_WEEKLY">Weekly</option>
+        <option value="TIME_SERIES_MONTHLY">Monthly</option>
+      </select>
+
+
+      <div class="charts">
+        <canvas id="priceChart"></canvas>
+        <canvas id="profitChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

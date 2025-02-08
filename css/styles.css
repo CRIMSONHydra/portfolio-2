@@ -1,0 +1,122 @@
+/*I Got styles from chatGPT, Frontend is hard sorry 🥲*/
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+  background-color: #35424a;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Main Container */
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.portfolio h2 {
+  margin-top: 0;
+}
+
+/* Form Styles */
+#addStockForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#addStockForm input[type="text"],
+#addStockForm input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+}
+
+#addStockForm button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #35424a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Autocomplete Suggestions */
+.suggestions {
+  position: relative;
+  width: calc(100% - 22px);
+  background: #fff;
+  border: 1px solid #ddd;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f4f4f4;
+}
+
+/* Portfolio Table Styles */
+#portfolioTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#portfolioTable th,
+#portfolioTable td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#portfolioTable th {
+  background-color: #35424a;
+  color: #fff;
+}
+
+/* Summary Section */
+#summary {
+  margin-top: 20px;
+  background: #e2e2e2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Charts Styles */
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.charts canvas {
+  flex: 1 1 45%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
